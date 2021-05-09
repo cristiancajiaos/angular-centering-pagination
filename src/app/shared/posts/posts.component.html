@@ -1,0 +1,19 @@
+<ul>
+  <li *ngFor="let post of posts | paginate: {itemsPerPage: 10, currentPage: currentPage}">
+    {{post.title}}
+  </li>
+</ul>
+
+
+<div class="d-flex flex-column flex-lg-row justify-content-lg-between align-items-center">
+  <div>...</div>
+  <pagination-controls (pageChange)="currentPage = $event" class="my-pagination">
+  </pagination-controls>
+</div>
+
+<!--
+<div class="pagination d-flex justify-content-center">
+  <pagination-controls (pageChange)="currentPage = $event" class="my-pagination">
+  </pagination-controls>
+</div>
+-->
